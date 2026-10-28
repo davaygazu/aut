@@ -1,0 +1,171 @@
+<!-- ПРОШТАТ: утвержденный блок v24. Вставить в T123. -->
+<style>
+#rec4201008101{display:none!important}
+#rec4739688201{display:none!important}
+.ps-nav-v2,.ps-nav-v2 *{box-sizing:border-box}
+.ps-nav-v2{position:relative;z-index:1000;background:radial-gradient(ellipse at 94% 45%,rgba(100,124,209,.20),transparent 43%),linear-gradient(90deg,#000000 0%,#000000 27%,#090b14 68%,#131628 100%);border-bottom:1px solid rgba(255,255,255,.10);font-family:Roboto,Arial,sans-serif;color:#fff}
+.ps-nav-v2__inner{max-width:1240px;min-height:88px;padding:14px 32px;margin:0 auto;display:flex;align-items:center;gap:28px}
+.ps-nav-v2__brand{display:flex;align-items:center;flex:none;text-decoration:none!important}
+.ps-nav-v2__brand img{display:block;width:115px;height:auto;max-height:65px;object-fit:contain}
+.ps-nav-v2__links{display:flex;align-items:center;gap:32px;margin:0 auto;list-style:none;padding:0}
+.ps-nav-v2__links a,.ps-nav-v2__tel{color:#fff!important;text-decoration:none!important;font-size:15px;font-weight:600;white-space:nowrap}
+.ps-nav-v2__tel{font-size:19px;font-weight:700}
+.ps-nav-v2__links a:hover,.ps-nav-v2__tel:hover{color:#617bd8!important}
+.ps-nav-v2__right{display:flex;align-items:center;gap:34px}
+.ps-nav-v2__callback{padding:12px 18px;border:2px solid #fff;border-radius:30px;color:#fff!important;background:transparent;text-decoration:none!important;font-weight:700;font-size:14px;white-space:nowrap;transition:background .2s,color .2s}
+.ps-nav-v2__callback:hover{background:#fff;color:#111!important}
+.ps-nav-v2__toggle{display:none;flex:none;align-items:center;justify-content:center;flex-direction:column;gap:5px;width:44px;height:44px;border:1px solid #535353;border-radius:14px;background:transparent;cursor:pointer}
+.ps-nav-v2__toggle span{display:block;width:21px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
+.ps-nav-v2__toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ps-nav-v2__toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+.ps-nav-v2__toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.ps-nav-v2 a:focus-visible,.ps-nav-v2 button:focus-visible{outline:3px solid #617bd8;outline-offset:3px}
+@media(max-width:1030px){.ps-nav-v2__inner{padding:12px 24px;gap:18px}.ps-nav-v2__links{gap:18px}.ps-nav-v2__right{gap:22px}.ps-nav-v2__callback{padding:11px 15px}}
+@media(max-width:850px){.ps-nav-v2__inner{min-height:70px;padding:10px 20px;flex-wrap:wrap;justify-content:space-between;gap:0}.ps-nav-v2__brand img{width:97px;max-height:51px}.ps-nav-v2__toggle{display:flex;margin-left:auto}.ps-nav-v2__links,.ps-nav-v2__right{display:none;width:100%;margin:0}.ps-nav-v2[data-open=true] .ps-nav-v2__links{display:flex;order:3;flex-direction:column;align-items:center;gap:0;padding-top:17px}.ps-nav-v2[data-open=true] .ps-nav-v2__links li a{display:block;text-align:center;min-width:190px;padding:15px 12px;border-bottom:1px solid rgba(255,255,255,.13)}.ps-nav-v2[data-open=true] .ps-nav-v2__right{display:flex;order:4;align-items:stretch;flex-direction:column;gap:18px;padding:18px 0 42px}.ps-nav-v2__tel{text-align:center;font-size:19px}.ps-nav-v2__callback{text-align:center}}
+@media(max-width:850px){.ps-nav-v2.ps-nav-v2--sticky{position:fixed;top:0;left:0;width:100%;z-index:1100;box-shadow:0 6px 25px rgba(0,0,0,.18)}.ps-nav-v2.ps-nav-v2--sticky + .ps-nav-v2__placeholder{display:block}}
+@media(max-width:380px){.ps-nav-v2__inner{padding-left:16px;padding-right:16px}}
+</style>
+<header class="ps-nav-v2" id="ps-nav-v2" data-open="false">
+  <nav class="ps-nav-v2__inner" aria-label="Главное меню">
+    <a class="ps-nav-v2__brand" href="/" aria-label="Проштат - главная"><img src="https://static.tildacdn.com/tild6266-6338-4464-b361-363266343533/12345678909876.png" alt="ПРОШТАТ" decoding="async"></a>
+    <button class="ps-nav-v2__toggle" type="button" aria-label="Открыть меню" aria-controls="ps-nav-v2-links" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="ps-nav-v2__links" id="ps-nav-v2-links">
+      <li><a href="#otzivi">Отзывы</a></li>
+      <li><a href="#stoimost">Стоимость</a></li>
+      <li><a href="#kontakti">Контакты</a></li>
+    </ul>
+    <div class="ps-nav-v2__right"><a class="ps-nav-v2__tel" href="tel:+78004441216">8 (800) 444-12-16</a><a class="ps-nav-v2__callback" href="#popup:myform1">Перезвоните мне</a></div>
+  </nav>
+</header>
+<script>
+(function(){
+  var nav=document.getElementById('ps-nav-v2');if(!nav)return;
+  var btn=nav.querySelector('.ps-nav-v2__toggle');
+  function setOpen(open){nav.setAttribute('data-open',String(open));btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');}
+  btn.addEventListener('click',function(){setOpen(nav.getAttribute('data-open')!=='true')});
+  nav.querySelectorAll('.ps-nav-v2__links a,.ps-nav-v2__right a').forEach(function(link){link.addEventListener('click',function(){setOpen(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false)});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target))setOpen(false)});
+  var hero=document.querySelector('.ps-hero-v1');
+  var spacer=document.createElement('div');spacer.className='ps-nav-v2__placeholder';spacer.style.display='none';
+  nav.insertAdjacentElement('afterend',spacer);
+  function syncSticky(){
+    if(!hero)return;
+    var shouldStick=window.innerWidth<=850 && hero.getBoundingClientRect().bottom<=0;
+    if(shouldStick){spacer.style.height=nav.offsetHeight+'px';spacer.style.display='block';nav.classList.add('ps-nav-v2--sticky');}
+    else{nav.classList.remove('ps-nav-v2--sticky');spacer.style.display='none';}
+  }
+  window.addEventListener('scroll',syncSticky,{passive:true});
+  window.addEventListener('load',syncSticky);
+  window.addEventListener('resize',function(){if(window.innerWidth>850)setOpen(false);syncSticky()});
+  syncSticky();
+})();
+</script>
+<section class="ps-hero-v1" aria-labelledby="ps-hero-title">
+  <div class="ps-hero-v1__mobile-background" aria-hidden="true"></div>
+  <div class="ps-hero-v1__inner">
+    <div class="ps-hero-v1__content">
+      <h1 id="ps-hero-title">ДМС для иностранных граждан <span>онлайн от 1 000 ₽</span></h1>
+      <p class="ps-hero-v1__lead">Полис взрослым и детям от 3 до 74 лет</p>
+      <div class="ps-hero-v1__mobile-photo"><img src="https://raw.githubusercontent.com/davaygazu/aut/main/vMGEM_T8Usd-ERa6yi-T.jpg" alt="Врач с карточкой ДМС" loading="eager" decoding="async"></div>
+      <div class="ps-hero-v1__benefits" aria-label="Преимущества оформления">
+        <div><span class="ps-hero-v1__check" aria-hidden="true">✓<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><span>Оформление онлайн за 10 минут <small>Оплата после проверки</small></span></div>
+        <div><span class="ps-hero-v1__check" aria-hidden="true">✓<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c4.5 0 7-3.2 7-7 0-3.6-2.4-6-4-7-1 2-1.8 2.7-2.2 3.1C12.7 7.1 10.8 4.9 8 3c.2 3.8-3 6.7-3 11.5C5 18.7 7.9 22 12 22Z"/><path d="M12 22c2.1 0 3.5-1.7 3.5-3.7 0-1.7-.8-3-2.1-4.3-.3 1.6-1.6 2.5-2.1 2.8-.2-1.4-.7-2.2-1.5-3.3-.2 2-1.5 3.1-1.5 5C8.3 20.5 9.7 22 12 22Z"/></svg></span><span>Никуда ходить не нужно <small>Всё электронно</small></span></div>
+        <div><span class="ps-hero-v1__check" aria-hidden="true">✓<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c-2-3-3.5-4-5.5-4a4 4 0 0 0 0 8C8.5 16 10 15 12 12Zm0 0c2 3 3.5 4 5.5 4a4 4 0 0 0 0-8C15.5 8 14 9 12 12Z"/></svg></span><span>Работаем по всей России</span></div>
+      </div>
+      <div class="ps-hero-v1__actions">
+        <a class="ps-hero-v1__btn ps-hero-v1__btn--primary" href="https://t.me/proshtat_rf" target="_blank" rel="noopener noreferrer">Получить ДМС в Telegram</a>
+        <a class="ps-hero-v1__btn ps-hero-v1__btn--secondary" href="https://max.ru/u/f9LHodD0cOKFTZQmQZuvy7kG_TSajxoVDLsl_UC9I6RZYiQMkO2vFy24KqY" target="_blank" rel="noopener noreferrer">Получить ДМС в MAX</a>
+      </div>
+      <p class="ps-hero-v1__under">Оформление без посещения офиса</p>
+    </div>
+    <div class="ps-hero-v1__visual" aria-label="Медицинский специалист с полисом ДМС" role="img">
+      <img src="https://raw.githubusercontent.com/davaygazu/aut/main/vMGEM_T8Usd-ERa6yi-T.jpg" alt="" fetchpriority="high" decoding="async" />
+      <div class="ps-hero-v1__visual-shade"></div>
+      <div class="ps-hero-v1__floating"><span class="ps-hero-v1__floating-icon">✓</span><span><strong>Быстро и удобно</strong><small>Всё оформление онлайн</small></span></div>
+    </div>
+  </div>
+</section>
+<style>
+.ps-hero-v1,.ps-hero-v1 *{box-sizing:border-box}
+.ps-hero-v1{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 85% 15%,#e9eeff 0%,transparent 49%),#f8faff;color:#10243d;font-family:Roboto,Arial,sans-serif}
+.ps-hero-v1__inner{max-width:1240px;margin:0 auto;padding:78px 32px 82px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:50px}
+.ps-hero-v1__content{min-width:0;position:relative;z-index:1}
+.ps-hero-v1__eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid #dce4f8;border-radius:100px;background:#fff;color:#4a63b4;font-size:13px;font-weight:700;line-height:1.3;margin-bottom:28px}
+.ps-hero-v1__dot{width:7px;height:7px;flex:none;border-radius:50%;background:#617bd8;box-shadow:0 0 0 4px #edf0ff}
+.ps-hero-v1 h1{margin:0;max-width:690px;font-size:clamp(37px,4.1vw,60px);line-height:1.1;letter-spacing:-.035em;font-weight:800;color:#10243d}
+.ps-hero-v1 h1 span{display:block;color:#617bd8}
+.ps-hero-v1__lead{font-size:clamp(18px,1.8vw,23px);line-height:1.45;font-weight:500;color:#45556c;margin:23px 0 28px}
+.ps-hero-v1__benefits{display:grid;gap:16px;margin-bottom:34px}
+.ps-hero-v1__benefits>div{display:flex;gap:13px;align-items:flex-start;font-size:16px;font-weight:600;line-height:1.38}
+.ps-hero-v1__benefits small{display:block;margin-top:2px;font-size:14px;line-height:1.4;font-weight:400;color:#68778c}
+.ps-hero-v1__check svg{display:none}
+.ps-hero-v1__check{display:flex;flex:none;align-items:center;justify-content:center;width:25px;height:25px;border-radius:9px;background:#e6edff;color:#4c67c5;font-size:15px;font-weight:800}
+.ps-hero-v1__actions{display:flex;flex-wrap:wrap;gap:12px}
+.ps-hero-v1__btn{min-height:54px;padding:14px 21px;display:inline-flex;align-items:center;justify-content:center;gap:13px;border-radius:30px;text-decoration:none!important;font-size:15px;line-height:1.3;font-weight:700;transition:background .2s,transform .2s,box-shadow .2s,border-color .2s;white-space:nowrap}
+.ps-hero-v1__btn--primary{background:#617bd8;color:#fff!important;box-shadow:0 9px 24px rgba(91,117,210,.20)}
+.ps-hero-v1__btn--secondary{background:transparent;color:#233b72!important;border:2px solid #617bd8}
+.ps-hero-v1__btn--primary{position:relative;isolation:isolate;overflow:hidden}
+.ps-hero-v1__btn--primary::after{content:"";position:absolute;z-index:1;top:-45%;bottom:-45%;left:0;width:22%;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08) 18%,rgba(255,255,255,.40) 50%,rgba(255,255,255,.08) 82%,transparent);transform:translateX(-220%) skewX(-24deg);animation:ps-hero-telegram-flash 5s linear infinite}
+@keyframes ps-hero-telegram-flash{0%{transform:translateX(-220%) skewX(-24deg)}60%,100%{transform:translateX(660%) skewX(-24deg)}}
+@media(prefers-reduced-motion:reduce){.ps-hero-v1__btn--primary::after{animation:none;display:none}}
+.ps-hero-v1__btn:focus-visible{outline:3px solid #263d90;outline-offset:3px}
+.ps-hero-v1__under{color:#78879a;font-size:13px;margin:15px 0 0}
+.ps-hero-v1__mobile-photo{display:none}
+.ps-hero-v1__visual{height:550px;width:calc(100% + 118px);transform:translateX(-28px);position:relative;overflow:hidden;border-radius:28px;background:#e7edf4;box-shadow:0 22px 70px rgba(27,48,93,.12)}
+.ps-hero-v1__visual img{width:100%;height:100%;display:block;object-fit:cover;object-position:60% center}
+.ps-hero-v1__visual-shade{position:absolute;inset:55% 0 0;background:linear-gradient(to bottom,transparent,rgba(12,33,60,.25));pointer-events:none}
+.ps-hero-v1__floating{position:absolute;left:22px;bottom:22px;display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.75);background:rgba(255,255,255,.95);border-radius:16px;padding:13px 17px;box-shadow:0 9px 24px rgba(16,34,61,.13);backdrop-filter:blur(8px)}
+.ps-hero-v1__floating-icon{width:37px;height:37px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#e8efff;color:#5671ce;font-weight:800;font-size:20px}
+.ps-hero-v1__floating strong,.ps-hero-v1__floating small{display:block}.ps-hero-v1__floating strong{font-size:14px;color:#182b45}.ps-hero-v1__floating small{font-size:12px;color:#6a7890;margin-top:3px}
+@media(hover:hover){.ps-hero-v1__btn:hover{transform:translateY(-2px)}.ps-hero-v1__btn--primary:hover{background:#4c68cb;box-shadow:0 12px 28px rgba(91,117,210,.3)}.ps-hero-v1__btn--secondary:hover{border-color:#3e59b5;background:rgba(97,123,216,.08)}}
+@media(max-width:1050px){.ps-hero-v1__visual{width:calc(100% + 30px);transform:none}.ps-hero-v1__inner{gap:30px;padding:62px 24px}.ps-hero-v1 h1{font-size:clamp(34px,4.3vw,49px)}.ps-hero-v1__visual{height:490px}.ps-hero-v1__btn{font-size:14px;padding:14px 17px}}
+@media(max-width:760px){
+ .ps-hero-v1__inner{display:block;padding:29px 20px 44px}
+ .ps-hero-v1__eyebrow{font-size:12px;margin-bottom:17px;padding:8px 11px}
+ .ps-hero-v1 h1{font-size:clamp(31px,8vw,45px);letter-spacing:-.035em;line-height:1.11}
+ .ps-hero-v1__lead{font-size:17px;line-height:1.38;margin:15px 0 18px}
+ .ps-hero-v1__mobile-photo{display:block;height:260px;overflow:hidden;border-radius:20px;margin:0 0 23px;background:#e8eef5;box-shadow:0 9px 24px rgba(27,48,93,.10)}
+ .ps-hero-v1__mobile-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+ .ps-hero-v1__benefits{gap:13px;margin-bottom:22px}
+ .ps-hero-v1__benefits>div{font-size:15px}
+ .ps-hero-v1__actions{display:grid;grid-template-columns:1fr;gap:10px}
+ .ps-hero-v1__btn{width:100%;white-space:normal;min-height:54px}
+ .ps-hero-v1__under{text-align:center;font-size:12px;margin-top:12px}
+ .ps-hero-v1__visual{display:none;transform:none}
+}
+@media(max-width:380px){.ps-hero-v1__inner{padding:32px 16px 40px}.ps-hero-v1 h1{font-size:32px}.ps-hero-v1__mobile-photo{height:225px}}
+@media(prefers-reduced-motion:reduce){.ps-hero-v1__btn{transition:none}}
+</style>
+<style>
+.ps-hero-v1__mobile-background{display:none}
+@media(max-width:760px){
+  .ps-hero-v1{background:#101e35;isolation:isolate;color:#fff}
+  .ps-hero-v1__mobile-background{display:block;position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(12,24,44,.59),rgba(12,24,44,.59)),
+      url('https://raw.githubusercontent.com/davaygazu/aut/main/vMGEM_T8Usd-ERa6yi-T.jpg');
+    background-size:100% 100%,cover;background-position:center,center 58%;background-repeat:no-repeat}
+  .ps-hero-v1__mobile-photo{display:none}
+  .ps-hero-v1__check svg{display:block}
+  .ps-hero-v1__check{width:34px;height:34px;border-radius:11px;font-size:0;background:#e8eeff;color:#617bd8}
+  .ps-hero-v1__check svg{width:22px;height:22px;stroke:#617bd8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+  .ps-hero-v1__check svg path:first-child:not(:only-child){fill:none}
+  .ps-hero-v1__inner{min-height:700px;padding-top:29px;padding-bottom:24px}
+  .ps-hero-v1__content{display:flex;flex-direction:column;min-height:647px}
+  .ps-hero-v1 h1,.ps-hero-v1__lead,.ps-hero-v1__benefits>div{color:#fff}
+  .ps-hero-v1 h1 span{color:#7e9bff}
+  .ps-hero-v1__benefits{margin-top:15px}
+  .ps-hero-v1__benefits small,.ps-hero-v1__under{color:rgba(255,255,255,.86)}
+  .ps-hero-v1__actions{margin-top:auto;position:relative;top:-45px}
+  .ps-hero-v1__under{position:relative;top:-35px}
+  .ps-hero-v1__btn--primary{border:0;background:#617bd8;color:#fff!important}
+  .ps-hero-v1__btn--secondary{background:transparent;border:2px solid #617bd8;color:#fff!important}
+  .ps-hero-v1__btn--secondary:hover{background:rgba(97,123,216,.13)}
+}
+@media(max-width:380px){
+  .ps-hero-v1__inner{min-height:680px;padding-top:26px;padding-bottom:22px}
+  .ps-hero-v1__content{min-height:632px}
+  .ps-hero-v1__mobile-background{background-position:center,52% center}
+}
+</style>
